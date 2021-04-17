@@ -9,6 +9,7 @@ router.get('/notes/', (req, res) => {
 });
 function createNewNote(body, notes) {
     const newNote = body;
+
     notes.push(newNote);
     fs.writeFileSync(
         path.join(__dirname, '../../db/db.json'),
@@ -17,6 +18,7 @@ function createNewNote(body, notes) {
     return newNote;
 };
 router.post('/notes', (req, res) => {
+    req.body.id = notes.length.toString();
     const newNote = createNewNote(req.body, notes);
     res.json(newNote);
 });
