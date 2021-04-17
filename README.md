@@ -25,4 +25,4 @@
   ## Deployed application
   https://protected-shore-06181.herokuapp.com/
   ## Mock-Up
-  ![alt text] (https://github.com/jypara-git/Note-Taker/blob/main/mock-up.png)
+  ![alt text](https://github.com/jypara-git/Note-Taker/blob/main/mock-up.png)
