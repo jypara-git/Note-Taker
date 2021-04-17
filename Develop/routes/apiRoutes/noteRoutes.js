@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const fs = require('fs');
-const notes = require('../../db/db');
+const notes = require('../../db/db.json');
 const path = require('path');
 
 router.get('/notes/', (req, res) => {
@@ -11,7 +11,7 @@ function createNewNote(body, notes) {
     const newNote = body;
     notes.push(newNote);
     fs.writeFileSync(
-        path.join(__dirname, '../../db/db'),
+        path.join(__dirname, '../../db/db.json'),
         JSON.stringify(notes)
     )
     return newNote;
